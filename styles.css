@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-image: url("https://th.bing.com/th/id/OIP.W28oTktyNejWj9dOd2ccHAHaDt?w=326&h=175&c=7&r=0&o=7&pid=1.7&rm=3") ;
+ background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.title{
+    display: grid;
+    place-items: center;
+    height: 100px;
+    color: white;
+}
+
+.completed{
+  text-decoration: line-through;
+}
+
+li{
+  color: white;
+}
+.addGrocery{
+ 
+}
