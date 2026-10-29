@@ -1,54 +1,3 @@
-//let groceryList = [];
-// while(true){
-// console.log(chooseOption);
-// if(chooseOption.toLowerCase() === "add item") {
-// //// let addItem = prompt("Add items to your grocery list:");
-// let present = false;
-// for(let i = 0; i < groceryList.length; i++){
-//     if(groceryList[i].toLowerCase() === addItem.toLowerCase()) {
-//         console.log("Item is already present");
-//         present = true;
-//         break;
-//     }
-// }
-// if(!present){
-//     groceryList.push(addItem);
-// }
-// }
-// if(chooseOption.toLowerCase() === "search item") {
-//     //// let searchItem = prompt("Search for an item on your grocery list:");
-//     let found = false;
-//     for(let i = 0; i < groceryList.length; i++) {
-//         if(groceryList[i].toLowerCase() === searchItem.toLowerCase()) {
-//             console.log("Found");
-//             found = true;
-//             break;
-//         }
-//     }
-//     if(!found) {
-//         console.log("Not found");
-//     }
-// }
-// if(chooseOption.toLowerCase() === "remove item") {
-//     let found = false;
-//     //// let removeItem = prompt("Enter the item to remove from your grocery list:");
-//     for(let i = 0; i < groceryList.length; i++) {
-//         if(groceryList[i].toLowerCase() === removeItem.toLowerCase()) {
-//             groceryList.splice(i, 1);
-//             console.log("Item removed");
-//             found = true;
-//             break;
-//         }
-//     }
-//     if(!found) {
-//         console.log("Item does not exist.");
-//     }
-// }
-// if(chooseOption.toLowerCase() === "quit") {
-//     break;
-// }
-// }
-
 let grocery = []
 
     let userInput = document.getElementById("userInput");
@@ -66,8 +15,23 @@ function groceryStrikethrough(event){
 }
 
 function leftToPurchase(){
-    let items = document.querySelectorAll('.groceryList li')
-    if(){
+    for(let i = 0; i < groceryList.children.length; i++){
+        let item = groceryList.children[i];
+        item.style.display = ""
+        if(item.classList.contains('completed')){
+            item.style.display = "none"
+        }
+    }
+}
 
+function purchasedItems(){
+    let items = document.querySelectorAll('.groceryList li');
+
+    for(let i = 0; i<items.length; i++){
+        if(items[i].classList.contains('completed')){
+            items[i].style.display ="list-item"
+        }else{
+            items[i].style.display = "none"
+        }
     }
 }
